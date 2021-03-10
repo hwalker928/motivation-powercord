@@ -16,10 +16,9 @@ module.exports = class fuckingGoogleIt extends Plugin {
     }
   
   async quote (args) {
-    let send = true;
     const data = await get(`http://api.quotable.io/random`).then(r => r.data);
     return {
-      send,
+      true,
       result: `data['content']`
     };
   }
