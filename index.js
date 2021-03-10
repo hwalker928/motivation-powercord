@@ -19,7 +19,7 @@ module.exports = class motivationPlugin extends Plugin {
     const data = await get(`http://api.quotable.io/random`).then(r => r.body);
     return {
       send: true,
-      result: data.content
+      result: `${data.content}`
     };
   }
 
