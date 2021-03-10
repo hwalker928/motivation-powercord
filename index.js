@@ -19,7 +19,7 @@ module.exports = class fuckingGoogleIt extends Plugin {
     const data = await get(`http://api.quotable.io/random`).then(r => r.data);
     return {
       true,
-      result: `data['content']`
+      result: data['content']
     };
   }
   
