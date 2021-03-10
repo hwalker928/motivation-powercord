@@ -7,7 +7,7 @@ module.exports = class motivationPlugin extends Plugin {
       command: 'motivation',
       description: 'Gets a random quote and sends it.',
       usage: '{c}',
-      executor: this.quote.bind(this)
+      executor: this.quote.bind()
     });
   }
 
@@ -15,8 +15,7 @@ module.exports = class motivationPlugin extends Plugin {
         powercord.api.commands.unregisterCommand('motivation');
     }
 
-  async quote (args) {
-    const data = await get(`http://api.quotable.io/random`).then(r => r.data);
+  async quote() {
     return {
       send: true,
       result: 'ok'
