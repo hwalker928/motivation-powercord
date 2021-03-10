@@ -1,6 +1,6 @@
 const { Plugin } = require('powercord/entities');
 
-module.exports = class fuckingGoogleIt extends Plugin {
+module.exports = class motivation extends Plugin {
   
   startPlugin () {
     powercord.api.commands.registerCommand({
