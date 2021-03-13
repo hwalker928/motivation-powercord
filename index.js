@@ -6,7 +6,7 @@ module.exports = class ChuckNorrisPlugin extends Plugin {
   startPlugin () {
     powercord.api.commands.registerCommand({
       command: 'ChuckNorris',
-      description: 'Pulls a random joke for the Chuck Norris API and sends it in chat.',
+      description: 'Pulls a random joke from the Chuck Norris API and sends it in chat.',
       usage: '{c}',
       executor: this.joke.bind()
     });

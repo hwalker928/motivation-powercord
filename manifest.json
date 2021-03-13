@@ -1,7 +1,7 @@
 {
   "name": "ChuckNorris",
   "version": "1.0.0",
-  "description": "Pulls a random joke for the Chuck Norris API and sends it in chat.",
+  "description": "Pulls a random joke from the Chuck Norris API and sends it in chat.",
   "author": "AshiePleb",
   "license": "MIT"
 }
