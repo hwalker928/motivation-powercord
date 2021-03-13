@@ -1,7 +1,7 @@
 {
-  "name": "Motivation",
+  "name": "ChuckNorris",
   "version": "1.0.0",
-  "description": "Gets a random quote and sends it in chat.",
-  "author": "harrydev",
-  "license": "MIL"
+  "description": "Pulls a random joke for the Chuck Norris API and sends it in chat.",
+  "author": "AshiePleb",
+  "license": "MIT"
 }

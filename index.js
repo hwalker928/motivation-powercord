@@ -1,27 +1,27 @@
 const { Plugin } = require('powercord/entities');
 const { get } = require('powercord/http');
 
-module.exports = class motivationPlugin extends Plugin {
+module.exports = class ChuckNorrisPlugin extends Plugin {
 
   startPlugin () {
     powercord.api.commands.registerCommand({
-      command: 'motivation',
-      description: 'Gets a random quote and sends it.',
+      command: 'ChuckNorris',
+      description: 'Pulls a random joke for the Chuck Norris API and sends it in chat.',
       usage: '{c}',
-      executor: this.quote.bind()
+      executor: this.joke.bind()
     });
   }
 
     pluginWillUnload() {
-        powercord.api.commands.unregisterCommand('motivation');
+        powercord.api.commands.unregisterCommand('ChuckNorris');
     }
 
-  async quote() {
-    const data = await get(`http://api.quotable.io/random`);
+  async joke() {
+    const data = await get(`https://api.chucknorris.io/jokes/random`);
     return {
       send: true,
-      result: `${data.body.content}`
+      result: `${data.body.value}`
     };
   }
-
 };
+
