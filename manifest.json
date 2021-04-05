@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Gets a random quote and sends it in chat.",
   "author": "harrydev",
+  "permissions": ["ext_api"],
   "license": "MIT"
 }
