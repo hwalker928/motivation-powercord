@@ -33,17 +33,12 @@ module.exports = class ChuckNorrisPlugin extends Plugin {
   }
   
   async cn() {
-    const data = await get(`https://api.chucknorris.io/jokes/random`);
     return {
       send: false,
       result: {
         type: 'rich',
         title: 'ChuckNorris-PowerCord Plugin Info',
-        description: `**__Name:_** \`${manifest.name}\`\n**__Description:_** \`${manifest.description}\`\n**__Version:_** \`${manifest.version}\`\n**__Author:_** \`${manifest.author}\``,
-        color: this.getRandomColour,
-        footer: {
-          text: 'ChuckNorris-PowerCord'
-        }
+        description: `**__Name:_** ${manifest.name}\n**__Description:_** ${manifest.description}\n**__Version:_** ${manifest.version}\n**__Author:_** ${manifest.author}`,
       }
     };
   }
